@@ -5,12 +5,12 @@ const sales = [
 ];
 
 const calcNetPrice = (arr) => {
-  let summary = [{}, {}, {}];
+  let summary = [];
   for (let i = 0; i < arr.length; i++) {
     if (arr[i].discount) {
-      summary[i]["netPrice"] = arr[i].price * (1 - arr[i].discount);
+      summary[i] = { netPrice: arr[i].price * (1 - arr[i].discount) };
     } else {
-      summary[i]["netPrice"] = arr[i].price;
+      summary[i] = { netPrice: arr[i].price };
     }
   }
   return summary;
