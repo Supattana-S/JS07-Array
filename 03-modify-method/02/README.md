@@ -1,11 +1,11 @@
-ผลจากการรันคำสั่งในบรรทัด * คืออะไร
+ผลจากการรันคำสั่งในบรรทัด \* คืออะไร
 
 ```js
 let arr = ["a", "b"];
 
-arr.push(function() {
+arr.push(function () {
   alert(this);
-})
+});
 
-arr[2](); // *
+arr[2](); // *alert ['a', 'b', function () {alert(this)]}
 ```
